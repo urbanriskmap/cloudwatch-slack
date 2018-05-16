@@ -4,7 +4,8 @@
   "description": "Slack integration for AWS Cloudwatch alarms",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test"
+    "lint": "eslint --fix index.js",
+    "test": "npm run lint"
   },
   "repository": {
     "type": "git",
