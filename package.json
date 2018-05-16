@@ -16,8 +16,7 @@
     "Cloudwatch",
     "bot"
   ],
-  "author": "Tomas Holderness",
-  "license": "GPL-3.0",
+  "author": "forked from https://gist.github.com/tomfa",
   "bugs": {
     "url": "https://github.com/urbanriskmap/cloudwatch-slack/issues"
   },

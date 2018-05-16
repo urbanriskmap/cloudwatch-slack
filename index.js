@@ -16,7 +16,7 @@ exports.handler = function(event, context) {
     };
 
     const sns = JSON.parse(event.Records[0].Sns.Message);
-    let message = sns.AlaramDescription + '\n Region: ' + sns.Region +
+    let message = sns.AlarmDescription + '\n Region: ' + sns.Region +
     '\n Timestamp: ' + sns.StateChangeTime;
 
     postData.attachments = [

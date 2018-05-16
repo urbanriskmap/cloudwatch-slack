@@ -1,0 +1,27 @@
+language: node_js
+
+node_js: '8.10'
+
+branches:
+  only:
+    - master
+
+install:
+  - npm install
+
+script:
+  - npm run test 
+
+before_deploy:
+  - npm run build
+
+deploy: 
+- provider: lambda
+  function_name: "cloudwatch-slack-us-sensors"
+  region: $AWS_REGION
+  role: $AWS_LAMBDA_ROLE
+  runtime: "nodejs8.10"
+  module_name: "index"
+  handler_name: "handler"
+  on:
+    branch: master
