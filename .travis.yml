@@ -12,9 +12,6 @@ install:
 script:
   - npm run test 
 
-before_deploy:
-  - npm run build
-
 deploy: 
 - provider: lambda
   function_name: "cloudwatch-slack-us-sensors"
